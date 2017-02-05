@@ -1,32 +1,28 @@
-print("\nfor文\n")
+puts "for文"
 for i in 1..9
     for j in 1..9
-        print(i*j," ")
+        print i * j, "\t"
     end
-    print("\n")
+    puts ""
 end
 
-print("\nwhile文\n")
-k=1
+puts "while文"
+k = 1
 while k <= 9
-    l=1
+    l = 1
     while l <= 9
-        print(k*l," ")
-        l=l+1
+        print k * l, "\t"
+        l = l + 1
     end
-    k=k+1
-    print("\n")
+    k = k + 1
+    puts ""
 end
 
-print("\ntimes\n")
+puts "times"
 
-m=1
-9.times do
-    n=1
-    9.times do
-        print(m*n," ")
-        n=n+1
+9.times do |m|
+    9.times do |n|
+        print (m + 1) * (n + 1), "\t"
     end
-    m=m+1
-    print("\n")
+    puts ""
 end
