@@ -1,18 +1,19 @@
-object = [{ name: 'taro', score: '85' }, { name: 'jiro', score: '72' }, { name: 'saburo', score: '66' }, { name: 'hanako', score: '98' }, { name: 'takako', score: '71' }]
+scores = { taro: 85, jiro: 72, saburo: 66, hanako: 98, takako: 71 }
 
-print("takakoさん\n")
-object.each do |n|
-    name = n[:name]
-    print(name, 'さんの点数は', n[:score], "点です\n") if name == 'takako'
+puts 'takakoさんの点数を表示します'
+name = /takako/
+scores.each do |k, v|
+    puts "#{k}さんの点数は#{v}点です" if name =~ k
 end
 
-print("名前にroが含まれている人\n")
-object.each do |n|
-    name = n[:name]
-    print(name, 'さんの点数は', n[:score], "点です\n") if /ro/ =~ name
+puts '名前にroが含まれている人の点数を表示します'
+name = /ro/
+scores.each do |k, v|
+    puts "#{k}さんの点数は#{v}点です" if name =~ k
 end
-print("名前にkoが含まれている人\n")
-object.each do |n|
-    name = n[:name]
-    print(name, 'さんの点数は', n[:score], "点です\n") if /ko/ =~ name
+
+puts '名前にkoが含まれている人を表示します'
+name = /ko/
+scores.each do |k, v|
+    puts "#{k}さんの点数は#{v}点です" if name =~ k
 end
